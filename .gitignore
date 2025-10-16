@@ -1,0 +1,17 @@
+# Generated outputs
+/sec_reports/
+/out/
+/output/
+/artifacts/
+/samples/*.json
+*.json
+*.jsonl
+*.zip
+*.log
+*.tmp
+
+# Editor / OS
+.vscode/
+*.code-workspace
+Thumbs.db
+Desktop.ini
