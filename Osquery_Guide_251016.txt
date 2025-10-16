@@ -1,0 +1,334 @@
+## Osquery 관련해서 사용 방법 ##
+ 
+PS C:\sec> New-Item -ItemType Directory -Force -Path 'C:\Tools' | Out-Null
+
+PS C:\sec> powershell -ExecutionPolicy Bypass -File C:\Tools\osquery_collect_pipeline.ps1
+[+] Running query: host_info
+WARNING: osqueryi exited with code 1 for host_info. stderr: E1016 11:01:08.742136 19412 config.cpp:879] updateSource
+failed to parse config, of source: \Program Files\osquery\osquery.conf and content: {
+  "schedule": {
+    "process_check": {
+      "query": "SELECT name, path, pid FROM processes WHERE path NOT LIKE 'C:\\Windows\\%';",
+      "interval": 3600
+    },
+    "network_check": {
+      "query": "SELECT * FROM listening_ports WHERE port > 1024;",
+      "interval": 3600
+    }
+  }
+}
+
+{
+  "file_paths": {
+    "system": [
+      "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "C:\\Windows\\System32\\config\\SAM"
+    ]
+  }
+}
+
+{
+  "events": {
+    "windows_events": {
+      "event_categories": ["process_creation"],
+      "event_sources": ["Microsoft-Windows-Security-Auditing"]
+    }
+  }
+}
+
+Error: no such column: hostname
+[+] Running query: users
+[+] Running query: services_custom
+WARNING: osqueryi exited with code 1 for services_custom. stderr: E1016 11:01:09.230134 21332 config.cpp:879]
+updateSource failed to parse config, of source: \Program Files\osquery\osquery.conf and content: {
+  "schedule": {
+    "process_check": {
+      "query": "SELECT name, path, pid FROM processes WHERE path NOT LIKE 'C:\\Windows\\%';",
+      "interval": 3600
+    },
+    "network_check": {
+      "query": "SELECT * FROM listening_ports WHERE port > 1024;",
+      "interval": 3600
+    }
+  }
+}
+
+{
+  "file_paths": {
+    "system": [
+      "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "C:\\Windows\\System32\\config\\SAM"
+    ]
+  }
+}
+
+{
+  "events": {
+    "windows_events": {
+      "event_categories": ["process_creation"],
+      "event_sources": ["Microsoft-Windows-Security-Auditing"]
+    }
+  }
+}
+
+Error: no such column: state
+[+] Running query: scheduled_tasks
+[+] Running query: processes_tmp
+WARNING: osqueryi exited with code 1 for processes_tmp. stderr: E1016 11:01:10.386118 20988 config.cpp:879]
+updateSource failed to parse config, of source: \Program Files\osquery\osquery.conf and content: {
+  "schedule": {
+    "process_check": {
+      "query": "SELECT name, path, pid FROM processes WHERE path NOT LIKE 'C:\\Windows\\%';",
+      "interval": 3600
+    },
+    "network_check": {
+      "query": "SELECT * FROM listening_ports WHERE port > 1024;",
+      "interval": 3600
+    }
+  }
+}
+
+{
+  "file_paths": {
+    "system": [
+      "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "C:\\Windows\\System32\\config\\SAM"
+    ]
+  }
+}
+
+{
+  "events": {
+    "windows_events": {
+      "event_categories": ["process_creation"],
+      "event_sources": ["Microsoft-Windows-Security-Auditing"]
+    }
+  }
+}
+
+Error: no such column: username
+[+] Running query: listening_ports
+WARNING: osqueryi exited with code 1 for listening_ports. stderr: E1016 11:01:10.659545 15916 config.cpp:879]
+updateSource failed to parse config, of source: \Program Files\osquery\osquery.conf and content: {
+  "schedule": {
+    "process_check": {
+      "query": "SELECT name, path, pid FROM processes WHERE path NOT LIKE 'C:\\Windows\\%';",
+      "interval": 3600
+    },
+    "network_check": {
+      "query": "SELECT * FROM listening_ports WHERE port > 1024;",
+      "interval": 3600
+    }
+  }
+}
+
+{
+  "file_paths": {
+    "system": [
+      "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "C:\\Windows\\System32\\config\\SAM"
+    ]
+  }
+}
+
+{
+  "events": {
+    "windows_events": {
+      "event_categories": ["process_creation"],
+      "event_sources": ["Microsoft-Windows-Security-Auditing"]
+    }
+  }
+}
+
+Error: no such column: name
+[+] Running query: external_sockets
+WARNING: osqueryi exited with code 1 for external_sockets. stderr: E1016 11:01:10.939925 10392 config.cpp:879]
+updateSource failed to parse config, of source: \Program Files\osquery\osquery.conf and content: {
+  "schedule": {
+    "process_check": {
+      "query": "SELECT name, path, pid FROM processes WHERE path NOT LIKE 'C:\\Windows\\%';",
+      "interval": 3600
+    },
+    "network_check": {
+      "query": "SELECT * FROM listening_ports WHERE port > 1024;",
+      "interval": 3600
+    }
+  }
+}
+
+{
+  "file_paths": {
+    "system": [
+      "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "C:\\Windows\\System32\\config\\SAM"
+    ]
+  }
+}
+
+{
+  "events": {
+    "windows_events": {
+      "event_categories": ["process_creation"],
+      "event_sources": ["Microsoft-Windows-Security-Auditing"]
+    }
+  }
+}
+
+Error: no such column: name
+[+] Running query: hive_times
+[+] Running query: startup_items
+[+] Running query: unsigned_running
+[+] Running query: windows_packages
+WARNING: osqueryi exited with code 1 for windows_packages. stderr: E1016 11:01:26.595947 21296 config.cpp:879]
+updateSource failed to parse config, of source: \Program Files\osquery\osquery.conf and content: {
+  "schedule": {
+    "process_check": {
+      "query": "SELECT name, path, pid FROM processes WHERE path NOT LIKE 'C:\\Windows\\%';",
+      "interval": 3600
+    },
+    "network_check": {
+      "query": "SELECT * FROM listening_ports WHERE port > 1024;",
+      "interval": 3600
+    }
+  }
+}
+
+{
+  "file_paths": {
+    "system": [
+      "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "C:\\Windows\\System32\\config\\SAM"
+    ]
+  }
+}
+
+{
+  "events": {
+    "windows_events": {
+      "event_categories": ["process_creation"],
+      "event_sources": ["Microsoft-Windows-Security-Auditing"]
+    }
+  }
+}
+
+Error: no such table: windows_programs
+Result saved to: C:\ProgramData\osquery_auto\20251016_110108
+Report: C:\ProgramData\osquery_auto\20251016_110108\report.json
+Suspicious: C:\ProgramData\osquery_auto\20251016_110108\suspicious\suspicious_index.jsonl
+Artifacts index: C:\ProgramData\osquery_auto\20251016_110108\suspicious\artifacts_index.jsonl
+[*] Done.
+PS C:\sec> Get-ChildItem "C:\ProgramData\osquery_auto" -Directory | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+
+
+    Directory: C:\ProgramData\osquery_auto
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2025-10-16  오전 11:01                20251016_110108
+
+
+PS C:\sec> cd C:\ProgramData
+PS C:\ProgramData>
+PS C:\ProgramData> dir
+
+
+    Directory: C:\ProgramData
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----     2025-10-01   오후 3:41                chocolatey
+d-----     2025-10-01   오후 3:41                ChocolateyHttpCache
+d-----     2024-07-16   오후 1:44                ESET
+d---s-     2024-03-05   오전 9:17                Microsoft
+d-----     2025-03-05  오후 12:19                Nartac Software
+d-----     2025-10-16  오전 11:01                osquery_auto
+d-----     2025-10-01   오후 3:42                Package Cache
+d-----     2023-10-17   오후 7:09                Qualys
+d-----     2025-10-15   오전 3:24                regid.1991-06.com.microsoft
+d-----     2025-10-01   오후 3:44                shimgen
+d-----     2018-09-15   오후 4:19                SoftwareDistribution
+d-----     2021-04-10   오전 4:29                ssh
+d-----     2021-05-12   오후 4:14                USOPrivate
+d-----     2021-04-10   오전 4:29                USOShared
+d-----     2024-09-19  오전 11:39                Veeam
+
+
+C:\ProgramData\osquery_auto\20251016_110108  <-- 해당 파일은 숨김 파일에 있음 
+
+폴더 구조 및 파일 설명 :
+
+파일 종류 :
+
+artifacts\	내용 요약 : 수집된 실제 파일(예: 비정상 서비스 exe, 스타트업 스크립트 등)	주요 용도 : 증거 파일 저장소
+
+suspicious\suspicious_index.jsonl	내용 요약 : 의심 항목 목록 및 해시 정보					주요 용도 : 후속 분석용 로그
+
+external_sokets.json	내용 요약 : 외부 네트워크 연결 목록(IP, Port, STATE)		주요 용도 : 외부 c2 서버 통신, 비정상 연결 탐지
+
+hive_times.json		내용 요약 : SAM, SYSTEM, SECURITY 레지스트리 하이브의 수정시간	주요 용도 : 최근 계정·정책 변경 감시
+
+host_info.json		내용 요약 : 호스트 OS 이름, 버전, 빌드 정보			주요 용도 : 시스템 기본 정보
+
+listening_ports.json	내용 요약 : 현재 열려 있는 포트와 프로세스 PID, 프로토콜		주요 용도 : 불필요 서비스/백도어 포트 확인
+
+processes_tmp.json	내용 요약 : C:Windows\temp 등에서 실행 중인 프로세스		주요 용도 : 임시 폴더 기반 악성 실행 탐지
+
+report.json	내용 요약 : 전체 쿼리 결과와 의심 항목이 통합된 메인 요약			주요 용도 : 전체 분석 결과 (SIEM, 알람 연동 시 사용)
+
+scheduled_tasks.json	내용 요약 : 예약 작업 (Task scheduler) 목록			주요 용도 : 자동 실행되는 악성 작업 탐지
+
+services_custom.json	내용 요약 : 비표준 경로 서비스 (C:\Windows\System32 외 경로)	주요 용도 : 비정상 서비스 등록 탐지
+
+startup_items.json	내용 요약 : 시작 프로그램 (Run, Startup 폴더 등)			주요 용도 : 자동 실행되는 앱 목록
+
+unsigned_running.json	내용 요약 : 서명되지 않은 실행 중 프로세스 목록			주요 용도 : 악성코드 가능성 높은 프로세스 식별
+
+users.json		내용 요약 : 시스템 사용자 계정 목록				주요 용도 : 불필요/의심 계정 존재 여부 확인
+
+windows_packages.json	내용 요약 : 설치된 프로그램 중 주요 패키지 (OpenSSL, Apache 등)	주요 용도 : 취약 버전 여부 확인용
+
+============================================================================================================================
+
+파일 여는 방법 (3가지)
+
+파워쉘에서 services_custom.json을 열려면 ?
+
+Get-Content "C:\ProgramData\osquery_auto\20251016_110108\services_custom.json" | ConvertFrom-Json | Format-Table -AutoSize
+
+다른 파일도 파일명만 바꿔서 동일하게 확인 가능?
+
+Get-Content ".\listening_ports.json" | ConvertFrom-Json | Format-Table
+
+Notepad++, 메모장 등에서 열기 가능?
+
+*.json 파일은 일반 텍스트 파일이라 메모장으로도 열 수 있다 !!
+
+하지만 더 보기 좋게 보려면 VSCode 또는 Notepad++에서 여세요.
+
+Excel(또는 Power BI)에서 시각적으로 보기도 가능해요!!
+
+- Excel → 데이터 탭 → 데이터 가져오기 → 파일 → JSON 파일
+- report.json 선택
+- Excel이 자동으로 테이블 형태로 변환
+
+=========================================================================================================================
+추가 팁 :
+
+suspicious\suspicious_index.jsonl :
+한 줄당 하나의 의심 항목(JSON Line 포맷).
+아래처럼 확인 가능:
+Get-Content "C:\ProgramData\osquery_auto\20251016_110108\suspicious\suspicious_index.jsonl" | ConvertFrom-Json | Format-Table
+
+artifacts\ 폴더 안의 파일:
+실제로 의심된 바이너리나 태스크 파일이 복사되어 있습니다.
+SHA256 해시는 옆에 .sha256 파일로 저장돼 있어 무결성 검증 가능.
+
+정리하자면:
+
+- report.json → 전체 통합 요약본
+- 각 *.json → 세부 테이블별 원본 데이터
+- suspicious\ → 의심된 항목 목록
+- artifacts\ → 실제 수집된 증거 파일
+
